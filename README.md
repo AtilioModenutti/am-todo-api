@@ -14,7 +14,7 @@ API REST para gestionar tareas de un ToDo simple. Forma parte de un stack desaco
 - Estructura simple para extender (auth con Sanctum, roles, tests, etc.)
 
 ## 🧱 Stack
-- PHP 8.2+ · Laravel 11
+- PHP 8.2+ · Laravel 12
 - MySQL/MariaDB
 - Composer
 
@@ -102,33 +102,6 @@ config/cors.php
 bootstrap/app.php
 ```
 
-**`bootstrap/app.php`** (Laravel 11) — asegurate de registrar las rutas:
-```php
-->withRouting(
-  web: __DIR__.'/../routes/web.php',
-  api: __DIR__.'/../routes/api.php',
-  commands: __DIR__.'/../routes/console.php',
-  health: '/up',
-)
-```
-
----
-
-## 🌐 CORS (dev con Vite)
-
-`config/cors.php`:
-```php
-'paths' => ['api/*'],
-'allowed_methods' => ['*'],
-'allowed_origins' => ['http://localhost:5173', 'http://127.0.0.1:5173'],
-'allowed_headers' => ['*'],
-'supports_credentials' => false,
-```
-Refrescar config:
-```bash
-php artisan config:clear
-```
-
 ---
 
 ## 🧪 Comandos útiles
@@ -139,12 +112,11 @@ php artisan optimize:clear
 ```
 
 ---
-
-## 🧭 Roadmap (próximos pasos)
+<!-- ## 🧭 Roadmap (próximos pasos)
 - [ ] Autenticación con Laravel Sanctum
 - [ ] Policies por usuario (cada uno ve solo sus tareas)
 - [ ] Pruebas Feature de CRUD + auth
-- [ ] Paginación y ordenamiento en `/api/tasks`
+- [ ] Paginación y ordenamiento en `/api/tasks` -->
 
 ## 📜 Licencia
 MIT
